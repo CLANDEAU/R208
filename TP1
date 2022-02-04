@@ -1,0 +1,25 @@
+def Question1(nom):
+    print(f"Je vais ouvrir le fichier {nom}")
+    fichier = open(nom,'r', encoding='utf-8')
+    cpt=1
+    for ligne in fichier:
+        ligne=ligne.rstrip("\n\r")
+        print(f"ligne {cpt} : {ligne}")
+        cpt+=1
+
+    fichier.close()
+
+def Question2(nom):
+    print(f"Explorateur du fichier {nom}")
+    fichier = open(nom,'r', encoding='utf-8')
+
+    fichier.readline()
+
+    for ligne in fichier:
+        ligne = ligne.rstrip("\n\r")
+        liste = ligne.split(";")
+        print(liste[2])
+
+if __name__=='__main__':
+    Question2("C:\\Users\\charl\\Documents\\BUT\\S2\\R208\\notes.txt")
+
