@@ -20,6 +20,13 @@ def Question2(nom):
         liste = ligne.split(";")
         print(liste[2])
 
+def Question3(nom):
+    print(f"Explorateur du fichier {nom}")
+    fichier = open(nom, 'r', encoding='utf-8')
+    
+
+
+
+
 if __name__=='__main__':
     Question2("C:\\Users\\charl\\Documents\\BUT\\S2\\R208\\notes.txt")
-
