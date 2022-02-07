@@ -20,13 +20,33 @@ def Question2(nom):
         liste = ligne.split(";")
         print(liste[2])
 
-def Question3(nom):
+"""def Question3(nom):              #Mon prog mais le doublon ne fonctionne pas
     print(f"Explorateur du fichier {nom}")
     fichier = open(nom, 'r', encoding='utf-8')
-    
+    etudiant = {}
+    for ligne in fichier:
+        liste = []
+        dict = {}
+        liste.append(ligne.split(";")[1])
+        liste.append(ligne.split(";")[2])
+        liste.append(ligne.split(";")[3])
+        liste.append(ligne.split(";")[5])
+        dict['nom']=liste[1]
+        dict['prenom']=liste[2]
+        dict['note']=liste[3]
+        if liste[0] not in etudiant:
+            etudiant[liste[0]]=dict
+        else:
+            print(f"{etudiant}\n")
+
+    fichier.close()
+    return etudiant
+"""
+
 
 
 
 
 if __name__=='__main__':
-    Question2("C:\\Users\\charl\\Documents\\BUT\\S2\\R208\\notes.txt")
+    print(Question3("C:\\Users\\charl\\Documents\\BUT\\S2\\R208\\notes.txt"))
+
